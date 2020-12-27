@@ -1,15 +1,29 @@
 {
-  "name": "resturant-management-front-end",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.0.4",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
-  }
+    "name": "resturant-management-front-end",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "axios": "0.21.1",
+        "next": "10.0.4",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-hook-form": "6.13.1",
+        "react-redux": "7.2.2",
+        "redux": "4.0.5",
+        "redux-devtools-extension": "2.13.8",
+        "swr": "0.3.11"
+    },
+    "devDependencies": {
+        "@types/node": "14.14.16",
+        "@types/react": "17.0.0",
+        "@types/react-redux": "7.1.14",
+        "@types/redux": "3.6.0",
+        "@types/redux-devtools-extension": "2.13.2",
+        "typescript": "4.1.3"
+    }
 }
