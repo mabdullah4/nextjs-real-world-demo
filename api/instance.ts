@@ -5,6 +5,7 @@ axios.defaults = {
     baseURL: process.env.API_URL,
     headers: {
         "Content-Type": "application/json; charset=utf-8",
+        Accept: "application/json",
     },
 };
 
@@ -24,7 +25,7 @@ axios.interceptors.request.use((config: AxiosRequestConfig) => {
 });
 
 axios.interceptors.response.use(
-    (response: AxiosResponse) => response.data,
+    (response: AxiosResponse) => response,
     (error: AxiosError<IServerError>) => error.response?.data.errors
 );
 

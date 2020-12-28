@@ -1,12 +1,12 @@
-import { ILogin, IRegister } from "../types/userType";
+import { ILogin, IProfile, IRegister, IUser } from "../types/userType";
 import instance from "./instance";
 
 const authApi = {
-    login: (url: string, data: ILogin) => instance.post(url, data),
-    register: (url: string, data: IRegister) => instance.post(url, data),
-    me: (url: string) => instance.get(url),
-    profile: (url: string) => instance.get(url),
-    update: (url: string, data: ILogin) => instance.put(url, data),
+    login: (data: ILogin) => instance.post<IUser>("users/login", data),
+    register: (data: IRegister) => instance.post<IUser>("users", data),
+    me: (url: string) => instance.get<IProfile>(url),
+    profile: (url: string) => instance.get<IProfile>(url),
+    update: (data: ILogin) => instance.put<IUser>("user", data),
 };
 
 export default authApi;
